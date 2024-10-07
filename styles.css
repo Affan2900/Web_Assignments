@@ -57,6 +57,12 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  transition: .3s ease;
+}
+
+nav ul li a:hover{
+  color:#8eff9d;
+  transform: scale(0.2rem);
 }
 
 /* Main content styles */
@@ -231,7 +237,8 @@ footer {
   }
 
   section {
-      padding: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
   }
 
   .animal-feature {
