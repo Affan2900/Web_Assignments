@@ -11,9 +11,9 @@ html, body {
 
 body {
   font-family: Arial, sans-serif;
-  
+  display: flex;
+  flex-direction: column;
 }
-
 
 /* Header styles */
 header {
@@ -29,6 +29,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 3rem;
+  
 }
 
 nav {
@@ -122,7 +123,11 @@ nav ul li a:hover {
     font-size: 1.2rem;
   }
 }
+
 /* Main content styles */
+main {
+  flex: 1;
+}
 
 section {
   background-color: rgba(255, 255, 255, 0.9);
@@ -157,7 +162,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  background-image: url('background2.jpg');
+  background-image: url('public/background2.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -380,6 +385,27 @@ footer {
   flex-shrink: 0;
 }
 
+footer p {
+  margin: 0.5rem 0;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.2);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   header {
@@ -469,6 +495,7 @@ footer {
 /* What's New */
 h1 {
   margin: 0;
+
 }
 
 .new-feature {
@@ -498,7 +525,6 @@ h1 {
   background-color: rgba(76, 175, 80, 0.1);
 }
 
-
 @media (max-width: 768px) {
   .new-feature {
       flex-direction: column;
@@ -508,4 +534,119 @@ h1 {
       width: 100%;
       height: auto;
   }
+}
+
+/* Contact info styles */
+main h1{
+  color: #1B5E20;
+  padding: 5px;
+  margin: 8px
+}
+
+.contact-info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info ul {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+.contact-info ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Contact form styles */
+.contact-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Pricing section styles */
+.pricing-section {
+  margin-bottom: 3rem;
+}
+
+.pricing-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pricing-item {
+  background-color: white;
+  border-radius: 5px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(25% - 1rem);
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-item h3 {
+  color: #4CAF50;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-item .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-item ul {
+  list-style-type: none;
+}
+
+.pricing-item ul li {
+  margin-bottom: 0.5rem;
 }
