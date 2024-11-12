@@ -524,6 +524,21 @@ h1 {
   background-color: rgba(76, 175, 80, 0.1);
 }
 
+.new-feature p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.new-feature button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .new-feature {
       flex-direction: column;
