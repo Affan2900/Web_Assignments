@@ -548,6 +548,49 @@ h1 {
       width: 100%;
       height: auto;
   }
+  [class*="details"] ul li {
+    flex: 1 1 100%; /* Change to full width on small screens */
+  }
+}
+
+[class*="details"]{
+   display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    margin-top: 7px;
+    border-radius: 20px;
+}
+
+[class*="details"] h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+[class*="details"] ul {
+  list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+[class*="details"] ul li{
+  flex: 1 1 calc(50% - 5px);
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+[class*="details"] p {
+    margin-top: 1rem;
+    color: #555;
 }
 
 /* Contact info styles */
