@@ -10,3 +10,20 @@ function toggleDetails(id) {
     button.textContent = "Show More Details";
   }
 }
+
+// theme-toggle.js
+function toggleTheme() {
+  const body = document.body;
+  const button = document.querySelector('.color-change-button');
+  const icon = document.querySelector('.sun-icon');
+  
+  // Toggle the dark theme class
+  body.classList.toggle('dark-theme');
+  
+  // Change icon based on theme
+  if (body.classList.contains('dark-theme')) {
+    icon.textContent = '🌙'; // Dark moon icon for dark theme
+  } else {
+    icon.textContent = '☀️'; // Sun icon for light theme
+  }
+}
