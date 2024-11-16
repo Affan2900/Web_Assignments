@@ -269,6 +269,146 @@ h3 {
 }
 
 /* Featured animals styles */
+.form-container {
+  width: 800px; /* Fixed width for larger screens */
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Base styles for the form */
+#animalFeatureForm {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Label styles */
+#animalFeatureForm label {
+  display: block;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Input and textarea styles */
+#animalFeatureForm input,
+#animalFeatureForm textarea {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#animalFeatureForm input:focus,
+#animalFeatureForm textarea:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Textarea styles */
+#animalFeatureForm textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+/* Button styles */
+#animalFeatureForm button {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#animalFeatureForm button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#animalFeatureForm button[type="submit"]:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#animalFeatureForm button[type="button"] {
+  background-color: #f44336;
+  color: white;
+}
+
+#animalFeatureForm button[type="button"]:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1024px) {
+  .form-container {
+    width: 100%; /* Adjust container to fit screen width */
+    padding: 20px;
+  }
+
+  #animalFeatureForm {
+    max-width: 100%;
+    padding: 40px; /* Reduce padding */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  #animalFeatureForm {
+    padding: 30px; /* Further reduce padding for smaller devices */
+    margin: 0 10px; /* Add horizontal spacing */
+  }
+
+  #animalFeatureForm input,
+  #animalFeatureForm textarea {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 12px; /* Reduce padding */
+  }
+
+  #animalFeatureForm button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  #animalFeatureForm label {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #animalFeatureForm {
+    padding: 20px; /* Minimal padding for very small screens */
+  }
+
+  #animalFeatureForm input,
+  #animalFeatureForm textarea {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #animalFeatureForm button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+.controls button{
+  margin: 20px;
+  font-size: 1.2rem;
+}
 .animal-feature {
   display: flex;
   align-items: flex-start;
