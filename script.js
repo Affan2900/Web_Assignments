@@ -31,7 +31,6 @@ function toggleTheme() {
   }
 }
 
-
 function showAnimalFeatureForm() {
   return new Promise((resolve, reject) => {
     // Create the form dialog container
@@ -110,7 +109,7 @@ function showAnimalFeatureForm() {
 function addAnimalFeature() {
   showAnimalFeatureForm()
     .then((formData) => {
-      console.log('Form data received:', formData);
+      console.log("Form data received:", formData);
 
       // Create an object from the returned promise data
       const newAnimal = {
@@ -119,17 +118,15 @@ function addAnimalFeature() {
         description: formData.description,
       };
 
-  
-
       // Append the new animal as a child to the .animal-container element
-      const animalContainer = document.querySelector('.animal-container');
+      const animalContainer = document.querySelector(".animal-container");
       if (!animalContainer) {
-        console.error('.animal-container element not found.');
+        console.error(".animal-container element not found.");
         return;
       }
 
-      const newArticle = document.createElement('article');
-      newArticle.classList.add('animal-feature');
+      const newArticle = document.createElement("article");
+      newArticle.classList.add("animal-feature");
       newArticle.innerHTML = `
           <img src="${newAnimal.image}" alt="${newAnimal.name}" class="animal-image">
           <div class="animal-description">
@@ -138,13 +135,13 @@ function addAnimalFeature() {
           </div>
       `;
 
-      console.log('Appending to .animal-container...');
+      console.log("Appending to .animal-container...");
       animalContainer.appendChild(newArticle);
 
-      console.log('Animal added successfully:', newAnimal);
+      console.log("Animal added successfully:", newAnimal);
     })
     .catch((error) => {
-      console.error('Failed to add animal:', error.message);
+      console.error("Failed to add animal:", error.message);
     });
 }
 
@@ -153,7 +150,7 @@ function removeLastAnimal() {
   const animalContainer = document.querySelector(".animal-container");
   // Check if the container is now empty
   if (animalContainer.children.length === 0) {
-    alert("Add More Animals!");
+    alert("No More Animals to Remove!");
   }
   // Check if there are any children
   if (animalContainer.children.length > 0) {
