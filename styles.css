@@ -904,3 +904,18 @@ body.dark-theme {
 .dark-theme .pricing-item h3 {
   color: #4CAF50;
 }
+.change-style{
+  margin : 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.success-message {
+  color: green;
+  font-size: 1rem;
+  margin-top: 10px;
+}

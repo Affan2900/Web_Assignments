@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wild Time Zoo</title>
+
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Doto&display=swap" rel="stylesheet"> <!-- Google Fonts -->
   </head>
   <body>
     <header>
@@ -41,9 +43,18 @@
         Wild Time Zoo Pricing
       </h1>
       <div class="button-container">
-        <button class="color-change-button" onclick="toggleTheme()">
+        <button
+          class="color-change-button change-style"
+          onclick="toggleTheme()"
+        >
           Change Background Color
           <span class="sun-icon">☀️</span>
+        </button>
+        <button class="change-style color-change-button" onclick="changeAllTextStyles()">
+          Change All Text Styles
+        </button>
+        <button class="change-style color-change-button" onclick="resetAllTextStyles()">
+          Reset All Text Styles
         </button>
       </div>
 
